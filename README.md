@@ -19,6 +19,10 @@ While creating a mortgage calculation configuration, user has option to leave th
 ![alt text](https://github.com/nirazgupta/mortgagecalculator/blob/master/project_images/withoutEP.PNG)
 ![alt text](https://github.com/nirazgupta/mortgagecalculator/blob/master/project_images/withoutEP2.PNG)
 Else user can use the combinations of extra montly payments or yearly payments with downpayment to generate the calculation with ammortization schedule. They can also only select the downpayment if they like.
-![alt text](https://github.com/nirazgupta/mortgagecalculator/blob/master/project_images/withMontlyEp.PNG)
+![alt text](https://github.com/nirazgupta/mortgagecalculator/blob/master/project_images/withMonthlyEp.PNG)
+
+
 ![alt text](https://github.com/nirazgupta/mortgagecalculator/blob/master/project_images/withAnnualEP.PNG)
+
+
 ![alt text](https://github.com/nirazgupta/mortgagecalculator/blob/master/project_images/withDownPayment.PNG)
