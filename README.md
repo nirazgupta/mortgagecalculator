@@ -1,5 +1,5 @@
 # mortgagecalculator
-Web application developed using Django framework to calculate mortgage using the inputs from user.
+MortgageCalculator is a web application developed using Django framework and sqlite3 which can be used make mortgage calculations. This application was developed as part of IT 680 - Software Engineering Project coursework with a time frame of 4 weeks.   
 
 # Features
 * Login:
