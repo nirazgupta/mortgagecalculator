@@ -16,9 +16,13 @@ User can view the list of their configurations using which they can compare diff
 
 * Mortgage calculation with payment options:
 While creating a mortgage calculation configuration, user has option to leave the extra payments option blank due which monthly or yearly extra payments will not be taken into consideration, same applies for downpayments. 
+
+
 ![alt text](https://github.com/nirazgupta/mortgagecalculator/blob/master/project_images/withoutEP.PNG)
 ![alt text](https://github.com/nirazgupta/mortgagecalculator/blob/master/project_images/withoutEP2.PNG)
+
 Else user can use the combinations of extra montly payments or yearly payments with downpayment to generate the calculation with ammortization schedule. They can also only select the downpayment if they like.
+
 ![alt text](https://github.com/nirazgupta/mortgagecalculator/blob/master/project_images/withMonthlyEp.PNG)
 
 
