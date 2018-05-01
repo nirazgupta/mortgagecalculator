@@ -1,12 +1,3 @@
-// function loopForm(form)
-// {
-//   if (document.getElementById('checkbox').checked == false) 
-//   {
-//       //alert('Select at least one member');
-//       document.getElementById('checkalert').innerHTML="Select at least one member";
-//       return false;
-//   }
-// }
 
 function validate(){
 	var user = document.loginform.username.value;
@@ -80,49 +71,7 @@ function calculatePayment()
 }
 
 
-  
-// These are the javascript code functioning in the app.
-// Get the data from user details form and send it to backend using ajax 
-// $("document").ready(function(){
-// 	$( "#user_submit" ).click(function(event) {
-// 		event.preventDefault();
-// 		var form = $('#user_form').validate().form();
 
-// 		if (form == true){
-// 			$.ajax({
-// 				type: 'POST',
-// 				url:'/mortgage/user/',
-// 				data: {
-// 					name:$('#name').val(),
-// 					email:$('#email').val(),
-// 					mortgage_name:$('#mortgage_config_name').val(),
-// 					csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val()
-// 				},
-// 				success: function(){
-	
-// 				}
-				
-// 			});
-
-// 			$( "#user_form" ).toggle( "slow", function() {
-// 				$('#content').load('/mortgage/loan #loan_form', function() {
-// 				});
-// 			});
-	
-// 			$("#user_toggle").click(function(){
-// 				$( "#user_form" ).toggle( "slow", function() {
-// 					});
-// 			});
-
-// 		} else {
-
-
-// 		}
-		
-
-		
-// 	});
-// });
 jQuery.browser = {};
 (function () {
     jQuery.browser.msie = false;
@@ -154,7 +103,7 @@ $("document").ready(function() {
 		submitHandler: function(form) {
 			$.ajax({
 				type: 'POST',
-				url:'/mortgage/user/',
+				url:'/user/',
 				data: {
 					name:$('#name').val(),
 					email:$('#email').val(),
@@ -168,7 +117,7 @@ $("document").ready(function() {
 			});
 
 			$( "#user_form" ).toggle( "slow", function() {
-				$('#content').load('/mortgage/loan #loan_form', function() {
+				$('#content').load('/loan #loan_form', function() {
 				});
 			});
 	
@@ -219,39 +168,6 @@ function validateForm() {
         return false;
 	} 
 }
-
-// $("document").ready(function(){
-// 	$( "#loan_submit" ).click(function(event) {
-// 		event.preventDefault();
-// 		$.ajax({
-// 			type: 'POST',
-// 			url:'/mortgage/loan/',
-// 			data: {
-// 				name:$('#loan_amount').val(),
-// 				email:$('#year').val(),
-// 				mortgage_name:$('#month').val(),
-// 				mortgage_name:$('#rate').val(),
-// 				csrfmiddlewaretoken:$('input[name=csrfmiddlewaretoken]').val()
-// 			},
-// 			success: function(){
-
-// 			}
-			
-// 		});
-
-// 		$( "#loan_form" ).toggle( "slow", function() {
-// 			$('#content').load('/mortgage/show_data.html #show_data_form', function() {
-// 			});
-// 		});
-// 	});
-
-// 	$("#loan_toggle").click(function(){
-//         $( "#loan_form" ).toggle( "slow", function() {
-//             });
-//     });
-
-// });
-
 
 
 $("document").ready(function() {

@@ -19,6 +19,6 @@ from mortgage import views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
-    url(r'^mortgage/', include('mortgage.urls')),
+    url(r'', include('mortgage.urls')),
     
 ]

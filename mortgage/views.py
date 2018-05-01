@@ -62,7 +62,7 @@ def show_data(request):
         loan_obj.save()
 
 
-        return redirect('/mortgage/show_configs/')
+        return redirect('/show_configs/')
     return render(request, 'mortgage/show_data.html')
 
 def show_configs(request):
@@ -192,7 +192,7 @@ def loan_config_detail(request, id):
 def delete(request, id):
    loan_record = get_object_or_404(Loan, pk=id)
    loan_record.delete()
-   return redirect('/mortgage/show_configs/')
+   return redirect('/show_configs/')
 
 def clear_session(request):
     session_keys = list(request.session.keys())
