@@ -3,6 +3,6 @@ Web application developed using Django framework to calculate mortgage using the
 
 #Features
 
-![alt text](project_images/Login.png "Logo Title Text 1")
+![alt text](https://github.com/nirazgupta/mortgagecalculator/blob/master/project_images/Login.PNG)
 
 
