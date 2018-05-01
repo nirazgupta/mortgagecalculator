@@ -1,0 +1,41 @@
+{% extends 'mortgage/layout.html' %}
+
+{% block body %}
+<div class="container">
+        <div class="row">
+            <div class="col-md-offset-3 col-md-6">
+            <form action='' method="POST" id="show_data_form">
+                {% csrf_token %}
+                <div class="form-group">
+                <h3>Result</h3>	
+                <label for="Loan_amount">Loan Amount</label>
+                <input type="text" class="form-control" id="loan_amount" name="loan_amount"  placeholder={{ amount }} disabled>
+                </div>
+                <div class="form-group">
+                <label for="duration">Duration</label>
+                <input type="text"  id="year" name="year" placeholder={{ term }} disabled> Months
+                </div>
+                <div class="form-group">
+                <label for="interest_rate">Interest Rate</label>
+                <input type="text" class="form-control" id="rate" name="rate"  placeholder={{ rate }} disabled>
+                </div>
+                <p>Interest: {{ interest }}</p>
+                <p>Total Interest: {{ tot_interest }}</p>
+                <p id='output'>Montly Payment: {{ monthly_payment }}</p>
+
+                <div class="row">
+                    <ul class="data_buttons">
+                    <div class="col-xs-6">
+                        <li id="new"  class="btn btn-success new_calc"><a href="/mortgage/loan"></a>New Calculation</li>
+                    </div>
+                    <div class="col-xs-6">
+                        <li id="detail"  class="btn btn-success detail"><a href="/mortgage/loan"></a>Calculation Detail</li>
+                    </div>
+                    </ul>
+                </div>
+            </form>
+            </div>
+        </div>
+</div>
+
+{% endblock %}

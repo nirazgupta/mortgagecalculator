@@ -1,0 +1,92 @@
+{% extends 'mortgage/layout.html' %}
+
+{% block body %}
+<div class="container">
+        <div class="row">
+            <div class="col-md-offset-3 col-md-6">
+            <div class="form-group">
+            <table class="table">
+                    <thead class="thead-dark">
+                      <tr>
+                        <th scope="col">Loan Config Name</th>
+                        <th scope="col">Borrowed</th>
+                        <th scope="col">Downpayment</th>
+                        <th scope="col">Year</th>
+                        <th scope="col">Month</th>
+                        <th scope="col">Rate</th>
+                      </tr>
+                    </thead>
+                    <tbody class="tbody">
+                      <tr>
+                        <td>{{ loan_data.loan_name }}</td>
+                        <td>{{ brwd_amt }}</td>
+                        <td>{{ loan_data.down_payment }}</td>
+                        <td>{{ loan_data.year }}</td>
+                        <td>{{ loan_data.month }}</td>
+                        <td>{{ loan_data.rate }}</td>
+                      </tr>
+                    </tbody>
+                  </table>
+            </div>
+            </div>
+            <div class="form-group">
+            <div class="col-md-offset-3 col-md-6">
+                <p> <b>Duration:</b> {{ context.term }} months</p>
+                <p> <b>Payoff Period:</b> {{ context.payoff_period }} months</p>
+                <!-- <p> <b>Interest</b> : {{ context.interest }}</p> -->
+                <p id='output'> <b>Montly Payments:</b>  {{ context.monthly_payment }}</p>
+                <p> <b>Total Interest:</b>  {{ context.tot_interest }}</p>
+                <p> <b>Regular Principle:</b>  {{ context.reg_principle }}</p>
+                <p> <b>Extra Principle:</b>  {{ context.extra_principle }}</p>
+                <p> <b>Total Principle:</b>  {{ context.total_principle }}</p>
+                <p> <b>Loan + Interest:</b>  {{ context.total_payments }}</p>
+                <p> <b>Total Savings:</b>  {{ context.total_savings }}</p>
+                
+            </div>
+            </div>
+            <div class="col-md-offset-3 col-md-6">
+                    <ul class="data_buttons">
+                    <div class="col-xs-6">
+                        <li id="new"  class="btn btn-success"><a class="new_loan" href="{% url 'loan' %}">New Calculation</a></li>
+                    </div>
+                    <div class="col-xs-6">
+                        <li id="ammortization_table_btn"  class="btn btn-success detail" data-toggle="collapse" data-target="#ammortization_table1" ><a href="/mortgage/loan"></a>Calculation Detail</li>
+                    </div>
+                    </ul>
+                </div>
+
+            <div class="col-md-offset-3 col-md-6 collapse" id="ammortization_table1">
+                <table class="table">
+                    <thead class="thead-dark">
+                      <tr>
+                        <th scope="col">Months</th>
+                        <th scope="col">Months Payments</th>
+                        <th scope="col">Interest</th>
+                        <th scope="col">Principle</th>
+                        <th scope="col">Extra Principle</th>
+                        <th scope="col">Ending balance</th>
+                      </tr>
+                    </thead>
+                    <tbody class="tbody">
+                        {% for item in ammortization_data %}
+                      <tr>
+                        <td>{{ item.term }}</td>
+                        <td>{{ item.montly_pmt }}</td>
+                        <td>{{ item.interest }}</td>
+                        <td>{{ item.principle }}</td>
+                        <td>{{ item.extra_pmt }}</td>
+                        <td>{{ item.ending_bal }}</td>
+                      </tr>
+                      {% endfor %}
+                    </tbody>
+                  </table>
+            </div>
+            </div>
+            
+            <div class="col-md-offset-3 col-md-6" id="content">
+                
+            </div>
+        </div>
+</div>
+
+{% endblock %}

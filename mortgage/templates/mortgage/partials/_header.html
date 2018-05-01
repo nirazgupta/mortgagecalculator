@@ -1,0 +1,54 @@
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>
+
+
+<nav class="navbar navbar-inverse">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="/mortgage/index">Mortgage Calculator</a>
+        </div>
+
+        <div id="navbar" class="collapse navbar-collapse">
+          <!-- <ul class="nav navbar-nav">
+            <li><a href="#">Home</a></li>
+            <li><a href="/mortgage/loan">Loan</a></li>
+            <li><a href="/mortgage/show_data">Data</a></li>
+            <li><a href="/mortgage/user">Users</a></li>
+          </ul> -->
+          <!-- <ul class="nav navbar-nav navbar-left">
+              <li><a href="/mortgage/loan">{{request.session.name}}</a></li>
+            </ul> -->
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="/mortgage/loan">{{request.session.name}}</a></li>
+            {% if request.session is not None %}
+              <li><a href="/mortgage/loan">New Loan</a></li>
+              <li><a href="/mortgage/show_configs">ViewConfigs</a></li>
+              <!-- <li><a href="/mortgage/show_data">Data</a></li> -->
+              <li><a href="{% url 'clear_session' %}">Exit</a></li>
+            {% else %}
+            <li><a href="/mortgage/user">Users</a></li>
+            {% endif %}
+          </ul>
+           <!-- <ul class="nav navbar-nav navbar-right">
+            {% if session.logged_in %}
+                {% if session.authority == 'admin' %}
+                  <li><a href="#">admin</a></li>
+                {% else %}
+                  <li><a href="#"> {{ session.username }}</a></li>
+                {% endif %}
+              <li><a href="#">Logout</a></li>
+            {% else %}
+              <li><a href="#">Signup</a></li>
+              <li><a href="#">Login</a></li>
+            {% endif %}
+          </ul>
+        </div>/.nav-collapse -->
+        </div>
+    </nav>
+ 

@@ -1,0 +1,56 @@
+{% extends 'mortgage/layout.html' %}
+
+{% block body %}
+<div class="container">
+        <div class="row">
+            <div class="col-md-offset-3 col-md-6">
+            <form action='{% url 'show_data' %}' method="POST" id="loan_form" onsubmit="return validateForm()">
+                {% csrf_token %}
+                <h3>Enter the details for loan:</h3>
+                <div class="form-group">
+                <label for="mortgage_config_name">Mortage configuration name:</label>
+                <input type="text" class="form-control" id="mortgage_config_name" name="loan_name" placeholder="Enter name for this mortgage configuration">
+                </div>	
+                <div class="form-group">
+                <label for="Loan_amount">Loan Amount</label>
+                <input type="text" class="form-control" id="loan_amount" name="loan_amount"  placeholder="Enter Amount">
+                </div>
+                <div class="form-group">
+                <label for="year">Years</label>
+                <input type="text" class="input_color" id="year" name="year" placeholder="Enter Year">
+                <label for="month">Months</label>
+                <input type="text"  id="month" class="input_color" name="month" placeholder="Enter Month" value="0">
+                </div>
+                <div class="form-group">
+                <label for="interest_rate">Interest Rate</label>
+                <input type="text" class="form-control" id="rate" name="rate"  placeholder="Enter Interest Rate">
+                </div>
+               
+               
+                <h3 id="extra_options"><a class="ext_form" href="#" >Extra Payment Options</a></h3>
+                <div id="extra_options_form">
+                <div class="form-group" >
+                <label for="add_per_month">Add Per Month</label>
+                <input type="text" class="form-control" id="add_per_month" name="add_per_month" placeholder="Enter per month amount" value="0">
+                </div>
+                <div class="form-group">
+                <label for="add_per_year">Add Per year</label>
+                <input type="text" class="form-control" id="add_per_year" name="add_per_year" placeholder="Enter per year ammount" value="0">
+                </div>
+                <div class="form-group">
+                <label for="down_payment">Down Payment</label>
+                <input type="text" class="form-control" id="down_payment" name="down_payment" placeholder="Enter Down Payment" value="0">
+                </div>
+                </div>
+                <p><input type="submit" id="loan_submit"  class="btn btn-success" value="submit" ></p>
+                <!-- <button type="button" id="loan_toggle" class="btn btn-info btn-block">Personal Detail</button>  -->
+            </form>
+            
+            </div>
+            <div class="col-md-offset-3 col-md-6" id="content">
+        
+            </div>
+        </div>
+</div>
+
+{% endblock %}

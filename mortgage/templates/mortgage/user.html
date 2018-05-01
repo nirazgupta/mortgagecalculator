@@ -1,0 +1,28 @@
+{% extends 'mortgage/layout.html' %}
+
+{% block body %}
+<div class="container">
+    <div class="row">
+        <div class="col-md-offset-3 col-md-6">	
+        <form action='', method="POST" id="user_form">{% csrf_token %}
+            <div class="form-group">
+            <h1>Enter your Details</h1>
+            <label for="exampleInputEmail1">Name:</label>
+            <input type="text" class="form-control" id="name" name="name" placeholder="Enter your name">
+            </div>
+            <div class="form-group">
+            <label for="exampleInputPassword1">Email:</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="Enter email">
+            </div>
+            <p><input type="submit" id="user_submit"  class="btn btn-success" value="submit" ></p>
+        </form>
+        <button type="button" id="user_toggle" class="btn btn-default btn-block">Personal Detail</button>  
+        </div>
+    </div>
+    <div class="col-md-offset-3 col-md-6" id="content">
+        
+    </div>
+     
+</div>
+
+{% endblock %}

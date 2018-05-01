@@ -1,0 +1,55 @@
+.btn.btn-success {
+    width: 100%
+}
+
+.row.btn.btn-success.detail > a {
+    color: white;
+}
+
+.new_loan {
+    color: white;
+}
+.new_loan:hover {
+    color: white;
+    text-decoration-line: none;
+}
+
+
+/* This CSS is not utilized*/
+/* body {
+    background-image: url("/static/img/background.jpg");
+}
+
+.form-control {
+    background-color: #f6f5f5; 
+}
+
+.input_color {
+    background-color: #f6f5f5; 
+}
+
+footer {
+    width: 100%;
+    height: 100;
+    bottom: 0;
+    position: fixed;     
+}
+
+.form-group {
+    color:rgb(45, 42, 42);
+}
+
+.ext_form {
+    color: #464646;
+}
+
+
+
+.tbody {
+    color: white;
+} */
+
+
+.tbody a {
+    color: #00325e;
+}
